@@ -1,23 +1,38 @@
 import hashlib
+import os
 import time
-import string
 
 
-mot_de_passe = input("Entrez le mot de passe : ")
-password_hash = hashlib.md5(mot_de_passe.encode('utf-8')).hexdigest()
-print(f"Password claire =>  {mot_de_passe} et password hashé  : {password_hash}")
+password = input("Enter your password: ")
+password_hash = hashlib.md5(password.encode('utf-8')).hexdigest()
+print(f"Password hash: {password_hash}")
 
-def hash_crack(password_hash):
+def hash_crack(password_hashed):
     debut = time.time()
-    file = open("liste_francais.txt", "r")
-    for line in file:
-        mot_fr = line.strip()
-        mot_fr_hash = hashlib.md5(mot_fr.encode('utf-8')).hexdigest()
-        if password_hash == mot_fr_hash:
-            print(f"Mot de passe trouvé : {mot_fr} HASH  => {mot_fr_hash}")
-            fin = time.time()
-            print(f"Temps d'execution : {(fin - debut):.2f} secondes")
-            return
+    try :
+        file = open('liste_francais.txt', 'r')
+    except FileNotFoundError:
+        print("Le fichier n'existe pas")
+        return
+    except Exception as e:
+        print(f"Une erreur s'est produite: {e}")
+    else:
+        trouve  = False
+        for line in file:
+            mots_dict = line.strip()
+            if hashlib.md5(mots_dict.encode('utf-8')).hexdigest() == password_hashed:
+                trouve = True
+                print(f"Le mot de passe est: {mots_dict}")
+
+        if not trouve :
+            print("Mot de passe introuvable")
+
+    finally:
+        fin = time.time()
+        print(f"Excécution en {fin - debut} s")
+        print("Le programme a finit de s'exécuter")
+
+
 
 
 
