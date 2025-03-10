@@ -3193,6 +3193,7 @@ brutalement
 brutalité
 brute
 brutes
+bruteforce
 Bruxelles
 bruxellois
 bruyant
@@ -5778,6 +5779,7 @@ croyant
 croyants
 croyez
 croyons
+cryptographie
 CRS
 cru
 cruauté
@@ -7254,6 +7256,7 @@ dix-neuvième
 dizaine
 dizaines
 Djakarta
+DNS
 do
 docile
 docilité
@@ -12499,6 +12502,7 @@ Kazan
 Kelly
 Kennedy
 Kenya
+keylogger
 kenyan
 khan
 Kharg
@@ -16273,6 +16277,7 @@ piquets
 piqûre
 Pirandello
 pirates
+piratage
 pire
 pires
 pis
@@ -17424,6 +17429,7 @@ provoquer
 provoqués
 proxénète
 proximité
+proxy
 prudemment
 prudence
 prudent
@@ -22621,6 +22627,7 @@ voyelle
 voyez
 voyons
 voyou
+VPN
 Vraca
 vrai
 vraie
