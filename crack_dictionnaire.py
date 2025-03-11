@@ -26,7 +26,7 @@ def hash_crack(password_hashed,filename='liste_francais.txt',detail=False):
                 sys.stdout.write(f'\r{" " * 100}')
                 sys.stdout.write(f"\r{mots_dict} ")
                 sys.stdout.flush()
-                time.sleep(0.01)
+                time.sleep(0.001)
 
             if hashlib.md5(mots_dict.encode('utf-8')).hexdigest() == password_hashed:
                 trouve = True
@@ -42,7 +42,8 @@ def hash_crack(password_hashed,filename='liste_francais.txt',detail=False):
         print("Le programme a finit de s'exécuter")
 
 
-
 if __name__ == "__main__":
+    print('Dans crack dico')
     password_hash = input("Enter le mot hashé : ")
     hash_crack(password_hash,detail=True)
+

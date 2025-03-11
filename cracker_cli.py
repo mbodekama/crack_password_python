@@ -1,7 +1,4 @@
 import argparse
-import hashlib
-import time
-import sys
 import crack_dictionnaire as crack
 
 
@@ -15,5 +12,6 @@ if __name__ == '__main__':
     try:
         crack.hash_crack(args.password,args.file,args.detail)
     except KeyboardInterrupt as e:
+        print('\n\nInterruption du programme')
         exit(1)
 
